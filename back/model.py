@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-from __init__ import create_app
+
 db=SQLAlchemy()
 
 
@@ -23,6 +23,7 @@ class Filmes(db.Model):
     usuarios=db.relationship('Usuarios', secondary=unidades, lazy='subquery', backref=db.backref('filme', lazy=True))
 
 if __name__ == "__main__":
+    from app import create_app
     app=create_app()
     app.app_context().push()
     db.init_app(app)

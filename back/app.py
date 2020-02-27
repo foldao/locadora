@@ -1,12 +1,15 @@
 from flask_cors import CORS
-from __init__ import create_app
+from flask import Flask
 from model import db
 from api import API
-
-app=create_app()
-app.app_context().push()
+def create_app():
+    app = Flask(__name__)
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/teste.db'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+    app.secret_key='bean legalzaum'
+    return app
 if __name__ == "__main__":
-    db.create_all()
+    app=create_app()
     API.init_app(app)
     db.init_app(app)    
-    app.run()
+    app.run(debug=True)
