@@ -28,3 +28,5 @@ if __name__ == "__main__":
     app.app_context().push()
     db.init_app(app)
     db.create_all()
+
+#run this file to create tables
