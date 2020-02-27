@@ -23,12 +23,5 @@ yarn-error.log*
 
 bin/
 lib/
-back/__pycache__/__init__.cpython-36.pyc
-back/__pycache__/__init__.cpython-37.pyc
-back/__pycache__/api.cpython-36.pyc
-back/__pycache__/app.cpython-36.pyc
-back/__pycache__/model.cpython-36.pyc
-back/__pycache__/model.cpython-37.pyc
+__pycache__/
 .env/locadora/pyvenv.cfg
-back/__pycache__/api.cpython-37.pyc
-back/__pycache__/app.cpython-37.pyc
